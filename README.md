@@ -1,12 +1,13 @@
 
-Program: to check location of a given coordination based on given list of states.
+# Geolocation: 
+This program checks location of a given coordination based on given list of states.
 Using the modified clipping algorithm (computer graphic) to check if a point is inside a polygon.
 
-
+## Technology
 Used Angular 4 and Express (Nodejs) to build.
 Should provide a given states.json file with all the coordinates of the states (server/resources/states.json)
 
-How to run:
+## How to run:
   1. (install node before run the below)
   
   2. npm install
