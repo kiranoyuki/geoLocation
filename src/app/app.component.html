@@ -1,0 +1,27 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+<div class="container">
+  <h1>Check location</h1>
+  <form>
+    <div class="form">
+      <input [(ngModel)] ="this.latitude" placeholder="latitude" name="latitude" type="number" required="">
+      <input [(ngModel)] ="this.longitude" placeholder="longitude" name="longitude" type="number" required="">
+    </div>
+
+    <button [ngClass]="{'hide' : this.latitude == null || this.longitude == null}" type="submit" (click)="this.getState()">Submit</button>
+
+  </form>
+
+
+  <div *ngIf="this.states" class="result">
+    <h3>The point you want to check belongs to:</h3>
+    <div *ngFor="let state of this.states">
+      <h6>{{state}}</h6>
+    </div>
+    <div *ngIf="this.states.length == 0">
+      <h6>The location you are looking for cannot be found on server</h6>
+    </div>
+  </div>
+</div>
+
+
